@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<div class="panel-group" style="background-color: #99CCFF"><h4>Урок #{{id}}</h4></div>
+<div>Общее присутствие учителя и ученика на уроке: {{time}}</div>
+{% endblock %}

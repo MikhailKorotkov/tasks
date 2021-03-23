@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h3 class="text-info">Список проведенных уроков: </h3>
+<ul>
+{% for test in tests %}
+    <li>
+        <p><a href="{{ url_for('lesson', id=test['id']) }}">Урок #{{ test['id'] }}</a></p>
+        <p>Кликните на урок для просмотра информации</p>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
